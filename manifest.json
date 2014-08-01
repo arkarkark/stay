@@ -1,0 +1,13 @@
+{
+  "name": "Stay",
+  "description":
+    "Restore browser location and position on display resolution changes.",
+  "version": "0.1",
+  "permissions": ["storage"],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "options_page": "options.html",
+  "manifest_version": 2,
+  "minimum_chrome_version": "17.0"
+}

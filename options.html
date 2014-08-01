@@ -1,0 +1,38 @@
+<html ng-app="stay" ng-controller="StayController as stay">
+<head>
+<title>Stay</title>
+<link rel="stylesheet" href="popup.css" type="text/css" />
+<script src="angular.min.js"></script>
+<script src="popup.js"></script>
+</head>
+<body style="width:450px">
+<div id="title"></div>
+<h1>Stay: {{stay.foo}}</h1>
+
+<div>screen:
+  <ul>
+    <li>width: {{stay.screen.width}}</li>
+    <li>height: {{stay.screen.height}}</li>
+  </ul>
+</div>
+
+<div>window:
+  <ul>
+    <li>width: {{stay.window.width}}</li>
+    <li>height: {{stay.window.height}}</li>
+    <li>top: {{stay.window.top}}</li>
+    <li>left: {{stay.window.left}}</li>
+  </ul>
+</div>
+
+<div>ALL window:
+  <table>
+    <tr ng-repeat="(k, v) in stay.window">
+      <th>{{k}}</th><td>{{v}}</td>
+    </tr>
+  </table>
+</div>
+
+<button ng-click="stay.doit()">Do it</button>
+</body>
+</html>
